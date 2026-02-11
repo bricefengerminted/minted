@@ -1,1 +1,38 @@
+# Address Book Upload: AI Mapping + Validation Review
+
+This project provides a browser-based upload flow for address book CSV files:
+
+1. **AI-assisted mapping**
+   - Detects likely source-to-target field mappings using header aliases and sample data patterns.
+2. **Human review step**
+   - Users can inspect AI suggestions, see confidence/reasoning, and manually change any mapping.
+3. **Invalid data visibility**
+   - Rows that fail validation are listed with row number and field-level error messages.
+4. **Import into interface**
+   - Valid records are imported into an in-app contacts table.
+
+## Run locally
+
+Because this is a static web app, any simple file server works:
+
+```bash
+python -m http.server 4173
+```
+
+Then open:
+
+```text
+http://localhost:4173
+```
+
+## Test
+
+```bash
+npm test
+```
+
+Tests cover:
+- CSV parsing behavior
+- AI mapping suggestions
+- Row validation and invalid-data detection
 
