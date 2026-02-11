@@ -1,0 +1,12 @@
+city,state,mailbox,line1,zip,country_code,tel,biz,name_first,name_last,misc
+Alicia,Nguyen,alicia.nguyen@example.com,+1 (415) 555-9033,Mint Labs,120 Market St,Suite 600,San Francisco,CA,94105,USA
+,Carver,not-an-email,555-12,Carver Co,11 3rd St,,New York,NY,10001,United States
+Liam,Patel,liam.patel@example.com,,,9 King Rd,Apt 2,Toronto,ON,M5V 2T6,Canada
+Noah,Olsen,noah.olsen@example,N/A,Nordic AB,,,Stockholm,,111 22,Sweden
+Mei,Chen,mei.chen@example.com,+86 10 1234 5678,Skyline,88 Zhongshan Rd,,Shanghai,SH,200000,China
+Jose,Martin,jose.martin@example.com,+34 600 123 123,,Calle 8,,Madrid,,28013,Spain
+Priya,Singh,,+91 98 7654 3210,PS Retail,5 MG Road,,Bengaluru,KA,560001,India
+Evan,Lee,evan.lee@example.com,(206)-555-1212,ELee LLC,400 Broad St,,Seattle,WA,98109,US
+Mila,Rossi,mila.rossi@example.com,1234,Rossi SRL,Via Roma 10,,Rome,RM,00100,Italy
+Omar,Haddad,omar.haddad@example.com,+971 50 222 9911,Desert Tech,,,Dubai,,00000,UAE
+Jordan,Kim,jk@company.co,+1 650 700 9000,Kinetic,1 Infinite Loop,Floor 2,Cupertino,CA,95014,United States
