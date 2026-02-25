@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address Book Upload with AI Mapping Review</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>Address Book Upload</h1>
+        <p class="subtle">
+          Upload a CSV. AI will suggest how source columns map to contact fields, and you can confirm or fix
+          mappings before import.
+        </p>
+
+        <div class="upload-controls">
+          <label for="fileInput" class="upload-label">Choose CSV file</label>
+          <input id="fileInput" type="file" accept=".csv,text/csv" />
+          <button id="runAiButton" type="button">Re-run AI mapping</button>
+        </div>
+        <p id="uploadStatus" class="status tone-neutral"></p>
+      </section>
+
+      <section id="mappingSection" class="card hidden">
+        <div class="section-header">
+          <h2>1. Review field mappings</h2>
+          <p id="aiSummary" class="subtle"></p>
+        </div>
+        <div id="mappingWarnings"></div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Target field</th>
+                <th>AI suggestion</th>
+                <th>Map from source column</th>
+              </tr>
+            </thead>
+            <tbody id="mappingRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="validationSection" class="card hidden">
+        <div class="section-header">
+          <h2>2. Validate and import</h2>
+          <p id="validationSummary" class="subtle"></p>
+        </div>
+
+        <div class="action-row">
+          <button id="invalidToggleButton" type="button">Show invalid data</button>
+          <button id="importButton" type="button" disabled>Import valid rows</button>
+        </div>
+        <p id="importNotice" class="subtle"></p>
+
+        <div id="invalidRowsPanel" class="hidden">
+          <h3>Invalid rows</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Row</th>
+                  <th>Validation errors</th>
+                  <th>Mapped value preview</th>
+                </tr>
+              </thead>
+              <tbody id="invalidRowsBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3>Valid data preview (first 10 rows)</h3>
+        <div class="table-wrap">
+          <table>
+            <thead id="previewHead"></thead>
+            <tbody id="previewBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>3. Imported into your interface</h2>
+        <p id="importedEmpty" class="subtle">No contacts imported yet.</p>
+        <div class="table-wrap">
+          <table id="importedTable" class="hidden">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Company</th>
+                <th>City</th>
+                <th>State/Province</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody id="importedBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
