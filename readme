@@ -25,6 +25,22 @@ Then open:
 http://localhost:4173
 ```
 
+## Build a single HTML file (double-click open)
+
+Generate a self-contained HTML file with inline CSS/JS:
+
+```bash
+npm run build:standalone
+```
+
+This creates:
+
+```text
+address-book-standalone.html
+```
+
+You can open that file directly in a browser without running a local server.
+
 ## Test
 
 ```bash
